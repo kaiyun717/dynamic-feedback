@@ -9,7 +9,7 @@ v0_y = 35 * sind(65);       % Initial velocity in y-direction (m/s)
 mass = 0.3;                 % Mass of the ball (kg)
 time_end = 7.0;             % Total trajectory time (sec)
 
-simOut = sim('me132Hw1Q4BallTrajectory');
+simOut = sim('me132Hw1Q4_BallTrajectory');
 
 xOut = simOut.xOut;
 yOut = simOut.yOut;
