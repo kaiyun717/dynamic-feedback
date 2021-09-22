@@ -19,7 +19,7 @@ figure()
 % the measured trajectory from `TrajectoryData.xls`.
 % Simply the norm of the difference between two vectors.
 
-%% (c)
+%% (c) Plot the trajectory for various values of c
 
 g = 9.81;                       % Gravitational Force (m/s^2)
 mass = 0.3;                     % Mass of ball (kg)
@@ -29,7 +29,7 @@ v_0 = 35;                       % Initial velocity (m/s)
 L = 101;
 c_vals = linspace(0, 0.1, L);   % Drag coefficient candidates
 cost = zeros(L, 1);             % Array of costs to save for comparison
-legends = cell(L, 1);         % Cell for legends
+legends = cell(L, 1);           % Cell for legends
 
 z = [0;
      v_0 * cosd(theta_0);
@@ -58,5 +58,13 @@ ylabel("y-position")
 legend(legends, 'Location', 'Best')
 
 hold off;
+figure()
+
+%% (c) Plot J(c)
+plot(c_vals, cost, ".")
+title("HW2 Q4(c): Cost for each value of c")
+xlabel("c-value")
+ylabel("J(c)")
+
 
 %% Best c = 0.004
